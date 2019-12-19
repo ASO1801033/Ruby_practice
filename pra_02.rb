@@ -1,6 +1,6 @@
 puts "算数ドリル"
 puts "スタートしますか？ はい＝1 / いいえ＝0"
-switch = gets.to_i
+switch = gets.to_i #getsは文字列だから整数型に変換
 cnt = 0
 
 case switch
