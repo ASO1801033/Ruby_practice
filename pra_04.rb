@@ -1,7 +1,7 @@
 fruits = ["りんご", "いちご", "みかん", "きゅうり", "ぶどう"]
 no = 0
 
-while no <= fruits.length - 1
+while no <= fruits.length - 1 #fruits.lengthは要素数にあわせて5になっている
   print "[" + no.to_s + "] "
   puts fruits[no.to_i]
   no += 1
