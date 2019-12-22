@@ -25,5 +25,5 @@ puts cnt.to_s + "問でした！"
 if cnt == no - 1 #ループを抜けた時点でnoは4になっている
   puts "よくできました！"
 elsif cnt == 0
-  puts "もっとがんばりましょう"
+  puts "もっとがんばりましょう、、"
 end
