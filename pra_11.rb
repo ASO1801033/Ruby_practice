@@ -20,14 +20,19 @@ cart = 0 #選んだ商品の単価 * 数量を足していく変数
 while cnt <= 3
   print cnt.to_s + "種類目："
   prono = gets.to_i
-  puts "\"" + proname[prono].slice(0..besym[prono]).to_s + "\"をいくつ買いますか？(数量を入力してね)"
-  #↑sliceメソッドを使って商品名のカッコ前までの文字列のみ表示させる(商品名のカッコ前までの文字数はbesym[prono]に格納されている)
-  #rangeの場合の書式は(num1..num2)という形になる
-  print cnt.to_s + "種類目の数量："
-  prokazu = gets.to_i
-  puts ""
-  cnt += 1
-  cart += proprice[prono] * prokazu #選んだ商品の単価 * 数量
+
+  unless prono < 0 || prono > proname.length - 1 #unless文は条件式が偽の時にTrueになる
+    puts "\"" + proname[prono].slice(0..besym[prono]).to_s + "\"をいくつ買いますか？(数量を入力してね)"
+    #↑sliceメソッドを使って商品名のカッコ前までの文字列のみ表示させる(商品名のカッコ前までの文字数はbesym[prono]に格納されている)
+    #rangeの場合の書式は(num1..num2)という形になる
+    print cnt.to_s + "種類目の数量："
+    prokazu = gets.to_i
+    puts ""
+    cnt += 1
+    cart += proprice[prono] * prokazu #選んだ商品の単価 * 数量
+  else
+    break
+  end
 end
 
 puts "合計は" + tax(cart).to_s + "円になります！"#メソッドの呼び出し・実行
