@@ -1,7 +1,7 @@
 data = [
-  { :name => "ねこ", :age => 10 },
-  { name:"ぱんだ", age:8 },
-  { name:"きつつき", age:7 }
+   { :name => "ねこ", :age => 10 },
+   { name:"ぱんだ", age:8 },
+   { name:"きつつき", age:7 }
 ]#ハッシュの書き方
 #変数 = { :key1 => 値1, :key2 => 値2 } 「:」が付いているものはシンボルをあらわす
 
@@ -27,14 +27,14 @@ when 0 then #会員追加
     puts "\n★ 会員追加後の会員リストはこちら！"
 
     (1..data.length).each do |cnt| #会員リストの表示
-      print "会員番号：" + cnt.to_s + ", 氏名：" + data[cnt.to_i - 1][:name] + ", 年齢：" + (data[cnt.to_i - 1][:age]).to_s + "歳\n"
+      print printf("会員番号：%03d", cnt).to_s + ", 氏名：" + data[cnt.to_i - 1][:name] + ", 年齢：" + (data[cnt.to_i - 1][:age]).to_s + "歳\n"
     end
   end
 when 1 #会員リストの表示
   puts "\n★ 会員リストはこちら！"
 
   (1..data.length).each do |cnt|
-    print "会員番号：" + cnt.to_s + ", 氏名：" + data[cnt.to_i - 1][:name] + ", 年齢：" + (data[cnt.to_i - 1][:age]).to_s + "歳\n"
+    print printf("会員番号：%03d", cnt).to_s + ", 氏名：" + data[cnt.to_i - 1][:name] + ", 年齢：" + (data[cnt.to_i - 1][:age]).to_s + "歳\n"
   end
 else
   puts "終了します"
