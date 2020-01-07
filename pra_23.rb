@@ -29,10 +29,12 @@ end
 
 #Main
 puts "縦・横・斜めにある数字の和が等しい魔法陣を表示します！"
-print "縦横が何マスの魔法陣をつくるか入力してください(3以上9以下の奇数) → "
+min = 3
+max = 9
+print "縦横が何マスの魔法陣をつくるか入力してください(" + min.to_s + "以上" + max.to_s + "以下の奇数) → "
 N = gets.to_i
 
-if (N >= 3 && N <= 9) && (N % 2 == 1)
+if (N >= min && N <= max) && (N % 2 == 1)
   magiccamp = Array.new(N + 1) { Array.new(N + 1) } #配列の宣言
   sum = (N * N * N + N) / 2 #数字の和を計算
 
