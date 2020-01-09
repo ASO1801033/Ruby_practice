@@ -19,8 +19,6 @@ def outputchomp!(word)
   p word
 end
 
-puts "chomp/chomp!メソッドの練習\\('O' \\)"
-
 print "文字列を入力しましょう → "
 word = gets.to_s
 
