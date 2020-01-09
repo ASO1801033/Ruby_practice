@@ -40,8 +40,6 @@ def boxoutputchop!(text)
   p text
 end
 
-puts "chop/chop!メソッドの練習\\('O' \\)"
-
 print "① 文字列を入力しましょう → "
 word = gets.to_s
 
